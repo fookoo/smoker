@@ -1,0 +1,55 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oswald Bold"), local("Oswald-Bold"), url("../fonts/Oswald-Bold.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oswald Bold"), local("Oswald-Bold"), url("../fonts/Oswald-Bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  margin: 0;
+  padding: 0; }
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald';
+  font-size: 15vh;
+  color: #fff;
+  text-transform: uppercase; }
+  #app #counter {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f00; }
+  #app #introduction {
+    pointer-events: none;
+    position: absolute;
+    width: 100vw;
+    bottom: 15vh;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 450ms; }
+    #app #introduction.show {
+      opacity: 1; }
+
+/*# sourceMappingURL=app.css.map */
