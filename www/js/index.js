@@ -29,7 +29,6 @@ class SmokerApp {
             b: parseInt(fromColor.b + (((toColor.b - fromColor.b) / steps) * step))
         }
     }
-    
 
     touchStart() {
         this.timer = new Date().getTime();
