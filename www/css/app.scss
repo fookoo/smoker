@@ -68,6 +68,9 @@ body {
     letter-spacing: 1px;
     opacity: 0;
 
+    padding: 0 2vw;
+
+    box-sizing: border-box;
     transition: opacity 450ms;
   }
 

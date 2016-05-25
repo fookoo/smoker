@@ -13,10 +13,8 @@ class SmokerApp {
 
         this.bindEvents();
         this.sync(false);
-
         this.setBackground();
         this.countdown(this.value);
-        
     }
 
     bindEvents() {
@@ -31,6 +29,7 @@ class SmokerApp {
             b: parseInt(fromColor.b + (((toColor.b - fromColor.b) / steps) * step))
         }
     }
+    
 
     touchStart() {
         this.timer = new Date().getTime();
