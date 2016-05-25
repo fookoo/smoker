@@ -11,7 +11,10 @@ class SmokerApp {
         this.longClickThreshold = 300;
 
         this.bindEvents();
-        this.sync();
+        this.sync(false);
+
+        this.setBackground();
+        this.countdown(this.value);
     }
 
     bindEvents() {
@@ -44,17 +47,18 @@ class SmokerApp {
         this.timer = 0;
     }
 
-    sync() {
+    sync(html = true) {
         if (this.value === undefined) {
             this.value = window.localStorage.getItem('smoker.value') || 0;
         }
 
-        let color = this.getGradientStepColor(this.fromColor, this.toColor, this.value < 60 ? this.value : 60, 60);
-        this.counter.innerHTML = this.value;
-        this.counter.style.background = `rgb(${ color.r },${ color.g },${ color.b })`;
-
         if (this.value > 0) {
             this.introduction.classList.remove('show');
+        }
+
+        if (html) {
+            this.setValueToHtml();
+            this.setBackground();
         }
 
         window.localStorage.setItem('smoker.value', this.value);
@@ -64,6 +68,25 @@ class SmokerApp {
         this.value = 0;
         this.introduction.classList.add('show');
         this.sync();
+    }
+
+    setValueToHtml() {
+        this.counter.innerHTML = this.value;
+    }
+
+    setBackground() {
+        let color = this.getGradientStepColor(this.fromColor, this.toColor, this.value < 60 ? this.value : 60, 60);
+        this.counter.style.background = `rgb(${ color.r },${ color.g },${ color.b })`;
+    }
+
+    countdown(value = 0, current = 0) {
+        if (current <= value) {
+            setTimeout(() => {
+                this.counter.innerHTML = current;
+
+                this.countdown(value, current + 1);
+            }, parseInt(1000 / value));
+        }
     }
 }
 

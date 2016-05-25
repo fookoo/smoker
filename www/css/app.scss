@@ -49,6 +49,8 @@ body {
     justify-content: center;
 
     background: $start-color;
+
+    transition: background 2s;
   }
 
   #introduction {

@@ -37,7 +37,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f00; }
+    background: #f00;
+    transition: background 2s; }
   #app #introduction {
     pointer-events: none;
     position: absolute;
