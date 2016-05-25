@@ -3,7 +3,21 @@ class SmokerApp {
         console.info('SmokerApp init');
 
         this.counter = document.getElementById('counter');
-        this.introduction = document.getElementById('introduction');
+        this.introduction = document.getElementById('introduction')
+
+        let perDay = new Component({
+            id: 'count',
+            label: '/ day',
+            title: 'How many cigarettes per day?'
+        });
+
+        let cost = new Component({
+            id: 'cost',
+            label: '/ PLN',
+            title: 'How much it cost?'
+        });
+
+
 
 
         this.fromColor = {r: 255, g: 0, b: 0};
@@ -88,6 +102,24 @@ class SmokerApp {
                 this.countdown(value, current + 1);
             }, parseInt(1000 / value));
         }
+
+    }
+}
+
+class Component {
+    constructor(options = {id: '', label: '', title: ''}) {
+        this.element = document.getElementById(options.id);
+
+        this.element.innerHTML =
+            `<header>${options.title}</header>
+            <content>
+                <span>0</span>
+                <label>${options.label}</label>
+            </content>
+            <nav>
+                <button class="up">+</button>
+                <button class="down">-</button>
+            </nav>`;
 
     }
 }
