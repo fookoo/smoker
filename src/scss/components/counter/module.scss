@@ -1,0 +1,103 @@
+$start-color: #f00;
+counter {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+
+  background: $start-color;
+
+  transition: background 2s;
+
+  #days {
+    display: block;
+    position: absolute;
+    text-align: center;
+  }
+
+  #savings,
+  #count {
+    display: block;
+    position: absolute;
+
+    &.intro {
+      display: none;
+    }
+  }
+
+  label {
+    display: none;
+    position: absolute;
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+@media all and (orientation:portrait) {
+  counter {
+    #days {
+      width: 100vw;
+      top: 15vh;
+      font-size: 50vw;
+    }
+
+    #savings,
+    #count {
+      left: 0;
+      font-size: 10vw;
+      padding: 20px;
+    }
+
+    #count {
+      bottom: 60px;
+    }
+
+    #savings {
+      bottom: 0;
+    }
+
+    label {
+      bottom: 40px;
+      left: 2vw; right: 2vw;
+
+      text-align: center;
+      font-size: 6vw;
+    }
+  }
+}
+@media all and (orientation:landscape) {
+  counter {
+    #days {
+      top: 0;
+      width: 50vw;
+      font-size: 50vh;
+      line-height: 100vh;
+    }
+
+    #count,
+    #savings {
+      left: 50vw;
+      line-height: 50vh;
+      text-align: center;
+      width: 50vw;
+    }
+
+    #count {
+      top: 0;
+    }
+
+    #savings {
+      top: 50vh;
+    }
+
+    label {
+      left: 38vw;
+      top: 33vh;
+      width: 58vw;
+      font-size: 7vh;
+      text-align: center;
+    }
+  }
+}
+

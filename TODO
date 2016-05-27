@@ -1,6 +1,0 @@
-Component:
--Podpiac eventy pod buttony (touchStart() i touchEnd()).
--Przedzial wartosci min-max + step.
--Metoda ktora zwraca wartosc komponentu
--Zapis/Odczyt do LocalStorage.
--CSSy
