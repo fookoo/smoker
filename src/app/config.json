@@ -1,0 +1,8 @@
+{
+  "introduction.text": "Tap once to increase,<br>tap longer for reset.<br>Enjoy your life without smoking",
+
+  "counter.key": "e30.smoker.counter.value",
+  "count.key": "e30.smoker.counter.count",
+  "cost.key": "e30.smoker.counter.cost",
+  "cost.currency.key": "e30.smoker.counter.cost.currency"
+}
