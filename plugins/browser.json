@@ -8,7 +8,7 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.smoker"
+            "PACKAGE_NAME": "e30.smoker"
         }
     },
     "dependent_plugins": {}
