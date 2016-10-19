@@ -38,23 +38,8 @@ counter {
   counter {
     #days {
       width: 100vw;
-      top: 15vh;
+      top: 23vh;
       font-size: 50vw;
-    }
-
-    #savings,
-    #count {
-      left: 0;
-      font-size: 10vw;
-      padding: 20px;
-    }
-
-    #count {
-      bottom: 60px;
-    }
-
-    #savings {
-      bottom: 0;
     }
 
     label {
@@ -73,22 +58,6 @@ counter {
       width: 50vw;
       font-size: 50vh;
       line-height: 100vh;
-    }
-
-    #count,
-    #savings {
-      left: 50vw;
-      line-height: 50vh;
-      text-align: center;
-      width: 50vw;
-    }
-
-    #count {
-      top: 0;
-    }
-
-    #savings {
-      top: 50vh;
     }
 
     label {

@@ -15,6 +15,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     transform: ['babelify'],
+                    watch: true
                 },
                 files: {
                     "www/js/app.js": ["src/app/app.js"]
@@ -32,12 +33,12 @@ module.exports = function (grunt) {
             options: {
                 event: ['changed', 'added', 'deleted'],
                 livereload: {
-                    host: 'localhost'
+                    host: 'localhost',
+                    port: 8284
                 }
             },
             scripts: {
-                files: ["src/app/**/*.js"],
-                tasks: ["browserify"]
+                 files: ["www/js/**/*.js"]
             },
             styles: {
                 files: ["src/scss/**/*.scss"],
@@ -47,6 +48,7 @@ module.exports = function (grunt) {
                 files: ['src/config.json'],
                 tasks: ['copy:config']
             },
+
             assets: {
                 files: [
                     "res/common/**/*",
