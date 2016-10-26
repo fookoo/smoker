@@ -1,6 +1,6 @@
 {
-  "name": "smoker",
-  "version": "1.0.1",
+  "name": "hog",
+  "version": "1.0.0",
   "description": "Easy way to quite smoking",
   "main": "www/index.html",
   "devDependencies": {
@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fookoo/smoker.git"
+    "url": "git+https://github.com/fookoo/hog.git"
   },
   "keywords": [
-    "smoker",
+    "hog",
     "cordova",
     "android",
     "es6"
@@ -30,7 +30,10 @@
   "author": "Piotr Pliszczynski <fookoo@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fookoo/smoker/issues"
+    "url": "https://github.com/fookoo/hog/issues"
   },
-  "homepage": "https://github.com/fookoo/smoker#readme"
+  "homepage": "https://github.com/fookoo/hog#readme",
+  "dependencies": {
+    "socket.io": "^1.5.0"
+  }
 }

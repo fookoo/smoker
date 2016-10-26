@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+    module.exports = function (grunt) {
     grunt.initConfig({
         sass: {
             dist: {
@@ -15,6 +15,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     transform: ['babelify'],
+                    watch: true
                 },
                 files: {
                     "www/js/app.js": ["src/app/app.js"]
@@ -32,7 +33,8 @@ module.exports = function (grunt) {
             options: {
                 event: ['changed', 'added', 'deleted'],
                 livereload: {
-                    host: 'localhost'
+                    host: 'localhost',
+                    port: 8284
                 }
             },
             scripts: {
@@ -109,6 +111,7 @@ module.exports = function (grunt) {
     grunt.registerTask("build", ["browserify", "sass"]);
 
     grunt.registerTask("development", ["build", "copy", "http-server","watch"]);
+    grunt.registerTask("dev-cordova", ["build", "copy","watch"]);
     grunt.registerTask("release", ["clean:all", "build", "copy", "uglify", "clean:dev"]);
 
     grunt.registerTask("default", ["development"]);

@@ -1,11 +1,25 @@
-import { Counter } from './components/counter/counter';
+import { Map } from './components/map/map';
 
-class App {
+export class App {
     constructor() {
         this.modules = [
-            new Counter(document.getElementsByTagName('counter')[0])
-        ]
+            new Map(document.getElementsByTagName('map')[0])
+        ];
+
+
+        facebookConnectPlugin.login(['public_profile'], (success) => {
+            console.info('fb login success');
+            console.dir(success);
+        }, (error) => {
+            console.warn('fb login fail');
+            console.warn(error);
+        });
     }
 }
 
-const APP = new App();
+
+
+
+document.addEventListener("deviceready", () => {
+    const APP = new App();
+}, false);

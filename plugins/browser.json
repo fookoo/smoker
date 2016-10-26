@@ -8,8 +8,23 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.smoker"
+            "PACKAGE_NAME": "e30.hog"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "e30.hog"
+        },
+        "plugin.google.maps": {
+            "PACKAGE_NAME": "e30.hog"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "228429260909567",
+            "APP_NAME": "HOG",
+            "PACKAGE_NAME": "e30.hog"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "e30.hog"
+        }
+    }
 }
